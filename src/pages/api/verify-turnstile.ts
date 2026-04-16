@@ -4,7 +4,7 @@ import type { APIRoute } from 'astro'
 
 const turnstileSecretKey = import.meta.env.TURNSTILE_SECRET_KEY || ''
 
-export const post: APIRoute = async(context) => {
+export const POST: APIRoute = async(context) => {
   const body = await context.request.json()
   const { token, sessionId } = body
 

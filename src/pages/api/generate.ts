@@ -7,7 +7,7 @@ const sitePassword = import.meta.env.SITE_PASSWORD || ''
 const passList = sitePassword.split(',') || []
 const turnstileSecretKey = import.meta.env.TURNSTILE_SECRET_KEY || ''
 
-export const post: APIRoute = async(context) => {
+export const POST: APIRoute = async(context) => {
   const body = await context.request.json()
   const { sign, time, messages, pass, sessionId } = body
 
